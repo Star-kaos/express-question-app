@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content 
+    if(quiztype === "programmingquiz")
+        h1=programmingquiz.data[random].question
+        each val in programmingquiz.data[random].answers
+            form(action=`/clicked?btn=${val}&random=${random}` method="post")
+                button(type="submit")= val
+    if(quiztype === "theofficequiz")
+        h1=theofficequiz.data[random].question
+    if(quiztype === "regularshowquiz")
+        h1=regularshowquiz.data[random].question
+
+

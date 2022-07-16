@@ -1,0 +1,11 @@
+extends layout.pug
+
+block content 
+    h1#title Question-app, would you like to test your knowledge?
+    form(action="/quiz?quiztype=programmingquiz", method="post")
+        button(type="submit") programming-quiz
+    form(action="/quiz?quiztype=theofficequiz", method="post")
+        button(type="submit") theOffice-quiz
+    form(action="/quiz?quiztype=regularshowquiz", method="post")
+        button(type="submit") regularShow-quiz
+
